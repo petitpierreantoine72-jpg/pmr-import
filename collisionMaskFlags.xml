@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<collisionMaskFlags>
+    <flag bit="0"  name="GROUND"/>
+    <flag bit="1"  name="STATIC"/>
+    <flag bit="2"  name="DYNAMIC"/>
+    <flag bit="3"  name="VEHICLE"/>
+    <flag bit="4"  name="VEHICLE_WHEEL"/>
+    <flag bit="5"  name="TRIGGER"/>
+    <flag bit="6"  name="RAIN_BLOCKER"/>
+
+    <preset name="GROUND">
+        <group>
+            <flag name="GROUND"/>
+        </group>
+        <mask>
+            <flag name="DYNAMIC"/>
+            <flag name="VEHICLE"/>
+            <flag name="VEHICLE_WHEEL"/>
+        </mask>
+    </preset>
+
+    <preset name="STATIC">
+        <group>
+            <flag name="STATIC"/>
+        </group>
+        <mask>
+            <flag name="DYNAMIC"/>
+            <flag name="VEHICLE"/>
+            <flag name="VEHICLE_WHEEL"/>
+        </mask>
+    </preset>
+
+    <preset name="DYNAMIC">
+        <group>
+            <flag name="DYNAMIC"/>
+        </group>
+        <mask>
+            <flag name="GROUND"/>
+            <flag name="STATIC"/>
+            <flag name="DYNAMIC"/>
+            <flag name="VEHICLE"/>
+        </mask>
+    </preset>
+
+    <preset name="VEHICLE">
+        <group>
+            <flag name="VEHICLE"/>
+        </group>
+        <mask>
+            <flag name="DYNAMIC"/>
+            <flag name="VEHICLE"/>
+            <flag name="TRIGGER"/>
+        </mask>
+    </preset>
+
+    <preset name="VEHICLE_GHOST">
+        <group>
+            <flag name="VEHICLE"/>
+        </group>
+        <mask>
+            <flag name="GROUND"/>
+            <flag name="STATIC"/>
+            <flag name="DYNAMIC"/>
+            <flag name="VEHICLE"/>
+        </mask>
+    </preset>
+
+    <preset name="VEHICLE_W_STATIC">
+        <group>
+            <flag name="VEHICLE"/>
+        </group>
+        <mask>
+            <flag name="STATIC"/>
+            <flag name="DYNAMIC"/>
+            <flag name="VEHICLE"/>
+            <flag name="TRIGGER"/>
+        </mask>
+    </preset>
+
+    <preset name="VEHICLE_TRIGGER">
+        <group>
+            <flag name="TRIGGER"/>
+        </group>
+        <mask>
+            <flag name="VEHICLE"/>
+        </mask>
+    </preset>
+
+    <preset name="VEHICLE_WHEEL">
+        <group>
+            <flag name="VEHICLE_WHEEL"/>
+        </group>
+        <mask>
+            <flag name="GROUND"/>
+            <flag name="STATIC"/>
+        </mask>
+    </preset>
+
+    <preset name="RAIN_BLOCKER">
+        <group>
+            <flag name="RAIN_BLOCKER"/>
+        </group>
+        <mask value="0"/>
+    </preset>
+</collisionMaskFlags>
